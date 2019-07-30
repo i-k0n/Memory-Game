@@ -10,24 +10,38 @@ class App extends React.Component {
     highscore: 0
   };
 
+  gameOver = () => {
+    if (this.state.score > this.state.highscore) {
+      this.setState({ highscore: this.state.score }, function() {
+        console.log("New Highscore: ", this.state.highscore);
+      });
+    }
+    // reset card count
+    this.state.cards.forEach(card => {
+      card.count = 0;
+    });
+    // replace with modal
+    console.log("Game Over. Your score: ", this.state.score);
+    this.setState({ score: 0 });
+    return true;
+  }
+
   cardClick = id => {
-    console.log("cardClick.id: ", id);
     this.state.cards.find((e, i) => {
       // if the clicked element's id 
       if (e.id === id) {
-        console.log("cards[i]: ", cards[i]);
-        console.log("cards[i].count: ", cards[i].count);
         if (cards[i].count === 0) {
           cards[i].count = cards[i].count + 1;
           this.setState({ score: this.state.score + 1}, function() {
-            console.log("score: ", this.state.score);
+            console.log(this.state.score)
           });
-          this.state.cards.sort(() => Math.random() - 0.5)
+          this.shuffleCards(this.state.cards);
           return true;
         } else {
-          // this.gameOver();
+          this.gameOver();
         }
       };
+      // return this.state.cards;
     });
   };
 
