@@ -1,15 +1,23 @@
 [
     {
         "id": 1,
-        "image": "../assets/images/mario.png"
+        "name": "mario",
+        "image": "../assets/images/mario.png",
+        "count": 0
     }, {
         "id": 2,
-        "image": "../assets/images/luigi.png"
+        "name": "luigi",
+        "image": "../assets/images/luigi.png",
+        "count": 0
     }, {
         "id": 3,
-        "image": "../assets/images/daisy.png"
+        "name": "daisy",
+        "image": "../assets/images/daisy.png",
+        "count": 0
     }, {
         "id": 4,
-        "image": "../assets/images/peach.png"
+        "name": "peach",
+        "image": "../assets/images/peach.png",
+        "count": 0
     }
 ]
