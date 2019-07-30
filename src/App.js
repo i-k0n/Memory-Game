@@ -11,40 +11,54 @@ class App extends React.Component {
   };
 
   gameOver = () => {
+    // if current score is greater than highscore, update high score
     if (this.state.score > this.state.highscore) {
       this.setState({ highscore: this.state.score }, function() {
         console.log("New Highscore: ", this.state.highscore);
       });
     }
-    // reset card count
+    // reset card counter
     this.state.cards.forEach(card => {
       card.count = 0;
     });
     // replace with modal
-    console.log("Game Over. Your score: ", this.state.score);
+    this.state.score === cards.length ? console.log("You win!") : console.log("You lose!")
+    // console.log("Game Over. Your score: ", this.state.score);
+    // reset state for score
     this.setState({ score: 0 });
+    // shuffle cards for new game
+    this.shuffleCards(this.state.cards);
     return true;
   }
 
   cardClick = id => {
+    // eslint-disable-next-line
     this.state.cards.find((e, i) => {
-      // if the clicked element's id 
+      // if the clicked element's id matches an id for a card
       if (e.id === id) {
+        // if the clicked card's counter is zero
         if (cards[i].count === 0) {
+          // increment
           cards[i].count = cards[i].count + 1;
           this.setState({ score: this.state.score + 1}, function() {
             console.log(this.state.score)
+            if (this.state.score === cards.length) {
+              // console.log("You win!")
+              this.gameOver();
+            }
           });
+          // shuffle cards after a guess
           this.shuffleCards(this.state.cards);
           return true;
+          // else, we've clicked it before, and it's a game over
         } else {
           this.gameOver();
         }
       };
-      // return this.state.cards;
     });
   };
 
+  // randomizer
   shuffleCards = array => {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
