@@ -1,4 +1,5 @@
-import React from "react";
+import React from "react"
+import Header from "./components/Header"
 import Card from "./components/Card"
 import cards from "./components/cards.json"
 import "./App.css"
@@ -22,7 +23,7 @@ class App extends React.Component {
       card.count = 0;
     });
     // replace with modal
-    this.state.score === cards.length ? console.log("You win!") : console.log("You lose!")
+    this.state.score === cards.length ? alert(`You Win with a score of ${this.state.score}!`) : alert(`You lost. Your score was ${this.state.score}. Please try again.`)
     // console.log("Game Over. Your score: ", this.state.score);
     // reset state for score
     this.setState({ score: 0 });
@@ -38,10 +39,11 @@ class App extends React.Component {
       if (e.id === id) {
         // if the clicked card's counter is zero
         if (cards[i].count === 0) {
-          // increment
+          // set clicked card as counted
           cards[i].count = cards[i].count + 1;
           this.setState({ score: this.state.score + 1}, function() {
             console.log(this.state.score)
+            this.correctText()
             if (this.state.score === cards.length) {
               // console.log("You win!")
               this.gameOver();
@@ -67,17 +69,30 @@ class App extends React.Component {
     return array;
   };
 
+  // tell the user they clicked correctly
+  correctText = () => {
+    const div = document.getElementById("win-lose");
+    console.log("div: ", div)
+    div.style.opacity = 1;
+    setTimeout(function() {
+      div.style.opacity = 0;
+    }, 750)
+  }
+
   render() {
     return (
-      <div className="card-container">
-        {this.state.cards.map(card => (
-              <Card 
-                cardClick={this.cardClick}
-                key={card.id}
-                id={card.id}
-                image={card.image}
-              />
-        ))}
+      <div className="wrapper">
+        <Header score={this.state.score} highscore={this.state.highscore}/>
+        <div className="card-container">
+          {this.state.cards.map(card => (
+                <Card 
+                  cardClick={this.cardClick}
+                  key={card.id}
+                  id={card.id}
+                  image={card.image}
+                />
+          ))}
+        </div>
       </div>
     );
   }
