@@ -72,7 +72,6 @@ class App extends React.Component {
   // tell the user they clicked correctly
   correctText = () => {
     const div = document.getElementById("win-lose");
-    console.log("div: ", div)
     div.style.opacity = 1;
     setTimeout(function() {
       div.style.opacity = 0;
@@ -93,6 +92,7 @@ class App extends React.Component {
                 />
           ))}
         </div>
+        <div className="inscrtuctions">Click an image to begin. Try not to click the same image twice!</div>
       </div>
     );
   }

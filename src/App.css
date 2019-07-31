@@ -8,10 +8,19 @@ body {
     display: grid;
     justify-content: center;
     align-content: center;
+    font-family: -apple-system,system-ui,BlinkMacSystemFont,Montserrat,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
 }
 
 .card-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     margin: auto;
+}
+
+.inscrtuctions {
+    text-align: center;
+    font-size: 1em;
 }
