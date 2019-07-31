@@ -2,62 +2,62 @@
     {
         "id": 1,
         "name": "electabuzz",
-        "image": "../assets/images/electabuzz.png",
+        "image": "assets/images/electabuzz.png",
         "count": 0
     }, {
         "id": 2,
         "name": "electivire",
-        "image": "../assets/images/electivire.png",
+        "image": "assets/images/electivire.png",
         "count": 0
     }, {
         "id": 3,
         "name": "elekid",
-        "image": "../assets/images/elekid.png",
+        "image": "assets/images/elekid.png",
         "count": 0
     }, {
         "id": 4,
         "name": "galvantula",
-        "image": "../assets/images/galvantula.png",
+        "image": "assets/images/galvantula.png",
         "count": 0
     }, {
         "id": 5,
         "name": "jolteon",
-        "image": "../assets/images/jolteon.png",
+        "image": "assets/images/jolteon.png",
         "count": 0
     }, {
         "id": 6,
         "name": "joltik",
-        "image": "../assets/images/joltik.png",
+        "image": "assets/images/joltik.png",
         "count": 0
     }, {
         "id": 7,
         "name": "minun",
-        "image": "../assets/images/minun.png",
+        "image": "assets/images/minun.png",
         "count": 0
     }, {
         "id": 8,
         "name": "pikachu",
-        "image": "../assets/images/pikachu.png",
+        "image": "assets/images/pikachu.png",
         "count": 0
     }, {
         "id": 9,
         "name": "plusle",
-        "image": "../assets/images/plusle.png",
+        "image": "assets/images/plusle.png",
         "count": 0
     }, {
         "id": 10,
         "name": "raichu",
-        "image": "../assets/images/raichu.png",
+        "image": "assets/images/raichu.png",
         "count": 0
     }, {
         "id": 11,
         "name": "zapdos",
-        "image": "../assets/images/zapdos.png",
+        "image": "assets/images/zapdos.png",
         "count": 0
     }, {
         "id": 12,
         "name": "abra",
-        "image": "../assets/images/abra.png",
+        "image": "assets/images/abra.png",
         "count": 0
     }
 ]
