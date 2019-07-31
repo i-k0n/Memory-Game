@@ -1,23 +1,63 @@
 [
     {
         "id": 1,
-        "name": "mario",
-        "image": "../assets/images/mario.png",
+        "name": "electabuzz",
+        "image": "../assets/images/electabuzz.png",
         "count": 0
     }, {
         "id": 2,
-        "name": "luigi",
-        "image": "../assets/images/luigi.png",
+        "name": "electivire",
+        "image": "../assets/images/electivire.png",
         "count": 0
     }, {
         "id": 3,
-        "name": "daisy",
-        "image": "../assets/images/daisy.png",
+        "name": "elekid",
+        "image": "../assets/images/elekid.png",
         "count": 0
     }, {
         "id": 4,
-        "name": "peach",
-        "image": "../assets/images/peach.png",
+        "name": "galvantula",
+        "image": "../assets/images/galvantula.png",
+        "count": 0
+    }, {
+        "id": 5,
+        "name": "jolteon",
+        "image": "../assets/images/jolteon.png",
+        "count": 0
+    }, {
+        "id": 6,
+        "name": "joltik",
+        "image": "../assets/images/joltik.png",
+        "count": 0
+    }, {
+        "id": 7,
+        "name": "minun",
+        "image": "../assets/images/minun.png",
+        "count": 0
+    }, {
+        "id": 8,
+        "name": "pikachu",
+        "image": "../assets/images/pikachu.png",
+        "count": 0
+    }, {
+        "id": 9,
+        "name": "plusle",
+        "image": "../assets/images/plusle.png",
+        "count": 0
+    }, {
+        "id": 10,
+        "name": "raichu",
+        "image": "../assets/images/raichu.png",
+        "count": 0
+    }, {
+        "id": 11,
+        "name": "zapdos",
+        "image": "../assets/images/zapdos.png",
+        "count": 0
+    }, {
+        "id": 12,
+        "name": "abra",
+        "image": "../assets/images/abra.png",
         "count": 0
     }
 ]
