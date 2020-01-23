@@ -92,7 +92,7 @@ class App extends React.Component {
                 />
           ))}
         </div>
-        <div className="inscrtuctions">Click an image to begin. Try not to click the same image twice!</div>
+        <div className="instructions">Click an image to begin. Try not to click the same image twice!</div>
       </div>
     );
   }
